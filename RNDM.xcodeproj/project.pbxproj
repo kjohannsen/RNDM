@@ -13,6 +13,8 @@
 		5C36CC3023039224006CC539 /* RNDM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CC2E23039224006CC539 /* RNDM.xcdatamodeld */; };
 		5C36CC322303922A006CC539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C36CC312303922A006CC539 /* Assets.xcassets */; };
 		5C36CC352303922A006CC539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C36CC332303922A006CC539 /* LaunchScreen.storyboard */; };
+		5C36CC3D23039554006CC539 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C36CC3C23039554006CC539 /* GoogleService-Info.plist */; };
+		E735DAEE4A29793943B3952D /* Pods_RNDM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93511C94A96BE7632301034 /* Pods_RNDM.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		5C36CC312303922A006CC539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C36CC342303922A006CC539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C36CC362303922A006CC539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C36CC3C23039554006CC539 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5FD2039200B21E13625043D2 /* Pods-RNDM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNDM.release.xcconfig"; path = "Target Support Files/Pods-RNDM/Pods-RNDM.release.xcconfig"; sourceTree = "<group>"; };
+		9E154D0A65AAAA257DC89D90 /* Pods-RNDM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNDM.debug.xcconfig"; path = "Target Support Files/Pods-RNDM/Pods-RNDM.debug.xcconfig"; sourceTree = "<group>"; };
+		A93511C94A96BE7632301034 /* Pods_RNDM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNDM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E735DAEE4A29793943B3952D /* Pods_RNDM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30C88EAA8EC0E6367F6AB6CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E154D0A65AAAA257DC89D90 /* Pods-RNDM.debug.xcconfig */,
+				5FD2039200B21E13625043D2 /* Pods-RNDM.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		55E872DA3BB112F043CEBC0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A93511C94A96BE7632301034 /* Pods_RNDM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5C36CC1B23039224006CC539 = {
 			isa = PBXGroup;
 			children = (
 				5C36CC2623039224006CC539 /* RNDM */,
 				5C36CC2523039224006CC539 /* Products */,
+				30C88EAA8EC0E6367F6AB6CF /* Pods */,
+				55E872DA3BB112F043CEBC0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +90,7 @@
 				5C36CC332303922A006CC539 /* LaunchScreen.storyboard */,
 				5C36CC362303922A006CC539 /* Info.plist */,
 				5C36CC2E23039224006CC539 /* RNDM.xcdatamodeld */,
+				5C36CC3C23039554006CC539 /* GoogleService-Info.plist */,
 			);
 			path = RNDM;
 			sourceTree = "<group>";
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C36CC392303922A006CC539 /* Build configuration list for PBXNativeTarget "RNDM" */;
 			buildPhases = (
+				29C3AA0659CC4919D019FC36 /* [CP] Check Pods Manifest.lock */,
 				5C36CC2023039224006CC539 /* Sources */,
 				5C36CC2123039224006CC539 /* Frameworks */,
 				5C36CC2223039224006CC539 /* Resources */,
+				5519D0C04A4D94E4C263EFE2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +156,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C36CC352303922A006CC539 /* LaunchScreen.storyboard in Resources */,
+				5C36CC3D23039554006CC539 /* GoogleService-Info.plist in Resources */,
 				5C36CC322303922A006CC539 /* Assets.xcassets in Resources */,
 				5C36CC2D23039224006CC539 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29C3AA0659CC4919D019FC36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNDM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5519D0C04A4D94E4C263EFE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RNDM/Pods-RNDM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RNDM/Pods-RNDM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNDM/Pods-RNDM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5C36CC2023039224006CC539 /* Sources */ = {
@@ -284,6 +357,7 @@
 		};
 		5C36CC3A2303922A006CC539 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E154D0A65AAAA257DC89D90 /* Pods-RNDM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +376,7 @@
 		};
 		5C36CC3B2303922A006CC539 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FD2039200B21E13625043D2 /* Pods-RNDM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
