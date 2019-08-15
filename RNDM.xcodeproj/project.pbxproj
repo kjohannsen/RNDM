@@ -15,6 +15,8 @@
 		5C36CC352303922A006CC539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C36CC332303922A006CC539 /* LaunchScreen.storyboard */; };
 		5C36CC3D23039554006CC539 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C36CC3C23039554006CC539 /* GoogleService-Info.plist */; };
 		5CB48B272304CD4D00C949D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB48B262304CD4D00C949D8 /* Constants.swift */; };
+		5CB48B2A2304FA9500C949D8 /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB48B292304FA9500C949D8 /* Thought.swift */; };
+		5CB48B2D2304FCDF00C949D8 /* ThoughtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB48B2C2304FCDF00C949D8 /* ThoughtCell.swift */; };
 		5CCF94AB2304B961009479F1 /* AddThoughtVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF94AA2304B961009479F1 /* AddThoughtVC.swift */; };
 		E735DAEE4A29793943B3952D /* Pods_RNDM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93511C94A96BE7632301034 /* Pods_RNDM.framework */; };
 /* End PBXBuildFile section */
@@ -30,6 +32,8 @@
 		5C36CC362303922A006CC539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C36CC3C23039554006CC539 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5CB48B262304CD4D00C949D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5CB48B292304FA9500C949D8 /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thought.swift; sourceTree = "<group>"; };
+		5CB48B2C2304FCDF00C949D8 /* ThoughtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtCell.swift; sourceTree = "<group>"; };
 		5CCF94AA2304B961009479F1 /* AddThoughtVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtVC.swift; sourceTree = "<group>"; };
 		5FD2039200B21E13625043D2 /* Pods-RNDM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNDM.release.xcconfig"; path = "Target Support Files/Pods-RNDM/Pods-RNDM.release.xcconfig"; sourceTree = "<group>"; };
 		9E154D0A65AAAA257DC89D90 /* Pods-RNDM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNDM.debug.xcconfig"; path = "Target Support Files/Pods-RNDM/Pods-RNDM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				5CB48B252304CD3700C949D8 /* New Group */,
+				5CB48B282304FA7900C949D8 /* New Group1 */,
+				5CB48B2B2304FCBD00C949D8 /* New Group2 */,
 				5CCF94A92304B93D009479F1 /* Controller */,
 				5C36CC2723039224006CC539 /* AppDelegate.swift */,
 				5C36CC2B23039224006CC539 /* Main.storyboard */,
@@ -105,6 +111,22 @@
 				5CB48B262304CD4D00C949D8 /* Constants.swift */,
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		5CB48B282304FA7900C949D8 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+				5CB48B292304FA9500C949D8 /* Thought.swift */,
+			);
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		5CB48B2B2304FCBD00C949D8 /* New Group2 */ = {
+			isa = PBXGroup;
+			children = (
+				5CB48B2C2304FCDF00C949D8 /* ThoughtCell.swift */,
+			);
+			path = "New Group2";
 			sourceTree = "<group>";
 		};
 		5CCF94A92304B93D009479F1 /* Controller */ = {
@@ -235,7 +257,9 @@
 				5CB48B272304CD4D00C949D8 /* Constants.swift in Sources */,
 				5C36CC2A23039224006CC539 /* MainVC.swift in Sources */,
 				5C36CC3023039224006CC539 /* RNDM.xcdatamodeld in Sources */,
+				5CB48B2A2304FA9500C949D8 /* Thought.swift in Sources */,
 				5CCF94AB2304B961009479F1 /* AddThoughtVC.swift in Sources */,
+				5CB48B2D2304FCDF00C949D8 /* ThoughtCell.swift in Sources */,
 				5C36CC2823039224006CC539 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
