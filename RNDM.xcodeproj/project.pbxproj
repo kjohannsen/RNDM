@@ -90,9 +90,9 @@
 		5C36CC2623039224006CC539 /* RNDM */ = {
 			isa = PBXGroup;
 			children = (
-				5CB48B252304CD3700C949D8 /* New Group */,
-				5CB48B282304FA7900C949D8 /* New Group1 */,
-				5CB48B2B2304FCBD00C949D8 /* New Group2 */,
+				5CB48B252304CD3700C949D8 /* Utilities */,
+				5CB48B282304FA7900C949D8 /* Model */,
+				5CB48B2B2304FCBD00C949D8 /* View */,
 				5CCF94A92304B93D009479F1 /* Controller */,
 				5C36CC2723039224006CC539 /* AppDelegate.swift */,
 				5C36CC2B23039224006CC539 /* Main.storyboard */,
@@ -105,28 +105,28 @@
 			path = RNDM;
 			sourceTree = "<group>";
 		};
-		5CB48B252304CD3700C949D8 /* New Group */ = {
+		5CB48B252304CD3700C949D8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				5CB48B262304CD4D00C949D8 /* Constants.swift */,
 			);
-			path = "New Group";
+			path = Utilities;
 			sourceTree = "<group>";
 		};
-		5CB48B282304FA7900C949D8 /* New Group1 */ = {
+		5CB48B282304FA7900C949D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				5CB48B292304FA9500C949D8 /* Thought.swift */,
 			);
-			path = "New Group1";
+			path = Model;
 			sourceTree = "<group>";
 		};
-		5CB48B2B2304FCBD00C949D8 /* New Group2 */ = {
+		5CB48B2B2304FCBD00C949D8 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				5CB48B2C2304FCDF00C949D8 /* ThoughtCell.swift */,
 			);
-			path = "New Group2";
+			path = View;
 			sourceTree = "<group>";
 		};
 		5CCF94A92304B93D009479F1 /* Controller */ = {
