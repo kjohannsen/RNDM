@@ -120,6 +120,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="RNDM" id="UM3-KT-1JX">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="lw2-mb-ERl">
+                            <connections>
+                                <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" id="c07-fV-r5x"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="addThoughtIcon" id="QCL-Ee-UX5">
                             <connections>
                                 <segue destination="a4f-k2-X6e" kind="show" id="CPd-op-tjP"/>
@@ -288,7 +293,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="signUpButtonPressed:" destination="6Mo-qm-e6G" eventType="touchUpInside" id="Brn-ed-dJ9"/>
+                                    <segue destination="Wm8-WJ-o5n" kind="show" id="CO4-Bq-RCk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -413,7 +418,7 @@
                         <outlet property="cancelButton" destination="5yx-eu-FKo" id="Ch1-5u-F0d"/>
                         <outlet property="createUserButton" destination="BBE-R3-MZ0" id="4Bb-WU-7m6"/>
                         <outlet property="emailTextField" destination="2sV-WH-JaA" id="jpA-d5-Ybx"/>
-                        <outlet property="passwordTextField" destination="jwm-6D-Ucb" id="5Mk-wc-gde"/>
+                        <outlet property="passwordTextField" destination="075-Kb-XY8" id="aNa-jg-tm5"/>
                         <outlet property="usernameTextField" destination="jwm-6D-Ucb" id="cYP-z0-k9p"/>
                     </connections>
                 </viewController>

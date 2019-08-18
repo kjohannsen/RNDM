@@ -25,6 +25,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     private var thoughtsCollectionRef: CollectionReference!
     private var thoughtsListener: ListenerRegistration!
     private var selectedCategory = ThoughtCategory.funny.rawValue
+    private var handle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,24 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         thoughtTableView.estimatedRowHeight = 80
         
         thoughtsCollectionRef = Firestore.firestore().collection(THOUGHTS_REF)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            if user == nil {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+                self.present(loginVC, animated: true, completion: nil)
+            } else {
+                self.setListener()
+            }
+        })
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if thoughtsListener != nil {
+            thoughtsListener.remove()
+        }
     }
     
     @IBAction func segmentedControlChanged(_ sender: Any) {
@@ -47,14 +66,15 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         setListener()
     }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        setListener()
+    @IBAction func logoutButtonPressed(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            debugPrint("Error signing out: \(signOutError)")
+        }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        thoughtsListener.remove()
-    }
     
     func setListener() {
         if selectedCategory == ThoughtCategory.popular.rawValue {

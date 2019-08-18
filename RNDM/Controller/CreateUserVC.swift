@@ -27,22 +27,22 @@ class CreateUserVC: UIViewController {
     
     @IBAction func createUserButtonPressed(_ sender: Any) {
         
-        guard let email = emailTextField!.text,
-            let password = passwordTextField!.text,
-            let username = usernameTextField!.text else { return }
-        
+        guard let email = emailTextField.text,
+            let password = passwordTextField.text,
+            let username = usernameTextField.text else { return }
+        print(password)
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if let error = error {
                 debugPrint("Error creating user \(error.localizedDescription)")
             }
             
-            let changeRequest = result?.user.createProfileChangeRequest()
-            changeRequest?.displayName = username
-            changeRequest?.commitChanges(completion: { (error) in
-                if let error = error {
-                    debugPrint(error.localizedDescription)
-                }
-            })
+//            let changeRequest = result?.user.createProfileChangeRequest()
+//            changeRequest?.displayName = username
+//            changeRequest?.commitChanges(completion: { (error) in
+//                if let error = error {
+//                    debugPrint(error.localizedDescription)
+//                }
+//            })
             
             guard let userId = result?.user.uid else { return }
             Firestore.firestore().collection(USERS_REF).document(userId).setData([
@@ -53,7 +53,7 @@ class CreateUserVC: UIViewController {
                     debugPrint(error.localizedDescription)
                 } else {
                     self.dismiss(animated: true, completion: nil)
-                    }
+                }
             })
         }
         

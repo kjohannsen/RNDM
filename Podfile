@@ -9,5 +9,6 @@ target 'RNDM' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
+  pod 'Firebase/Analytics'
 
 end
