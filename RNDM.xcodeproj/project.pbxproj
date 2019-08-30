@@ -13,6 +13,9 @@
 		5C36CC3023039224006CC539 /* RNDM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C36CC2E23039224006CC539 /* RNDM.xcdatamodeld */; };
 		5C36CC322303922A006CC539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C36CC312303922A006CC539 /* Assets.xcassets */; };
 		5C36CC352303922A006CC539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C36CC332303922A006CC539 /* LaunchScreen.storyboard */; };
+		5C922E022311D46200C25ED6 /* CommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C922E012311D46200C25ED6 /* CommentsVC.swift */; };
+		5C922E042311D48D00C25ED6 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C922E032311D48D00C25ED6 /* CommentCell.swift */; };
+		5C922E062311DC3500C25ED6 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C922E052311DC3500C25ED6 /* Comment.swift */; };
 		5CB48B272304CD4D00C949D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB48B262304CD4D00C949D8 /* Constants.swift */; };
 		5CB48B2A2304FA9500C949D8 /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB48B292304FA9500C949D8 /* Thought.swift */; };
 		5CB48B2D2304FCDF00C949D8 /* ThoughtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB48B2C2304FCDF00C949D8 /* ThoughtCell.swift */; };
@@ -32,6 +35,9 @@
 		5C36CC312303922A006CC539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C36CC342303922A006CC539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C36CC362303922A006CC539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C922E012311D46200C25ED6 /* CommentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsVC.swift; sourceTree = "<group>"; };
+		5C922E032311D48D00C25ED6 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		5C922E052311DC3500C25ED6 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		5CB48B262304CD4D00C949D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5CB48B292304FA9500C949D8 /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thought.swift; sourceTree = "<group>"; };
 		5CB48B2C2304FCDF00C949D8 /* ThoughtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtCell.swift; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				5CB48B292304FA9500C949D8 /* Thought.swift */,
+				5C922E052311DC3500C25ED6 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -129,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				5CB48B2C2304FCDF00C949D8 /* ThoughtCell.swift */,
+				5C922E032311D48D00C25ED6 /* CommentCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,6 +148,7 @@
 				5C36CC2923039224006CC539 /* MainVC.swift */,
 				5CDB3CD123085CDB004D4CF5 /* LoginVC.swift */,
 				5CDB3CD323085F60004D4CF5 /* CreateUserVC.swift */,
+				5C922E012311D46200C25ED6 /* CommentsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -263,8 +272,11 @@
 				5CB48B272304CD4D00C949D8 /* Constants.swift in Sources */,
 				5C36CC2A23039224006CC539 /* MainVC.swift in Sources */,
 				5CDB3CD223085CDB004D4CF5 /* LoginVC.swift in Sources */,
+				5C922E042311D48D00C25ED6 /* CommentCell.swift in Sources */,
 				5C36CC3023039224006CC539 /* RNDM.xcdatamodeld in Sources */,
+				5C922E022311D46200C25ED6 /* CommentsVC.swift in Sources */,
 				5CB48B2A2304FA9500C949D8 /* Thought.swift in Sources */,
+				5C922E062311DC3500C25ED6 /* Comment.swift in Sources */,
 				5CCF94AB2304B961009479F1 /* AddThoughtVC.swift in Sources */,
 				5CDB3CD423085F60004D4CF5 /* CreateUserVC.swift in Sources */,
 				5CB48B2D2304FCDF00C949D8 /* ThoughtCell.swift in Sources */,

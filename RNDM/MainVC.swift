@@ -17,15 +17,21 @@ enum ThoughtCategory : String {
 }
 
 class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    // MARK: Outlets
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var thoughtTableView: UITableView!
+    
+    // MARK: Variables
     
     private var thoughtsArray = [Thought]()
     private var thoughtsCollectionRef: CollectionReference!
     private var thoughtsListener: ListenerRegistration!
     private var selectedCategory = ThoughtCategory.funny.rawValue
     private var handle: AuthStateDidChangeListenerHandle?
+    
+    // MARK: View Protocols
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +59,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             thoughtsListener.remove()
         }
     }
+    
+    // MARK: Functions
     
     @IBAction func segmentedControlChanged(_ sender: Any) {
         switch segmentedControl.selectedSegmentIndex {
@@ -105,6 +113,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    // MARK: TableView Protocols
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -118,6 +128,20 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "thoughtCell", for: indexPath) as? ThoughtCell else { return UITableViewCell() }
         cell.configureCell(thought: thoughtsArray[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toCommentsVC", sender: thoughtsArray[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCommentsVC" {
+            if let destinationVC = segue.destination as? CommentsVC {
+                if let thought = sender as? Thought {
+                    destinationVC.thought = thought
+                }
+            }
+        }
     }
 
 
